@@ -1,8 +1,0 @@
----
-title: Aw yeah
-layout: default
----
-
-John looked at Janet with frightful eyes, and said some words. Another character also said words, and then left the room. It was clear that words needed to be said, and saying of words was very much a thing that was happening around this time.
-
-That's enough now.

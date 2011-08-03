@@ -2,23 +2,10 @@
 layout: default
 title: Half Ninja
 ---
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset='utf-8'>
-
-  <title>Half Ninja</title>
-
-</head>
-
-<body>
-  <a href="http://github.com/halfninja/halfninja"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
-
-  <div id="container">
 
     <h1><a href="http://github.com/halfninja">Half Ninja</a></h1>
 
-    <p>A wizard has turned your git repo into a website! Is this awesome Y/N?</p>
+    <p>A wizard has turned your git repo into a website! Is this awesome <span id="is-awesome">Y</span>/<span id="not-awesome">N</span>? <span id="awesome-response"></span></p>
 
     <h2>Some kind of H-two</h2>
 
@@ -26,15 +13,22 @@ title: Half Ninja
 
    <ul class="posts">
     {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ site.root }}{{ post.url | remove:site.urlstrip }}">{{ post.title }}</a></li>
+      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ site.baseurl }}{{ post.url | remove:site.urlstrip }}">{{ post.title }}!</a></li>
     {% endfor %}
   </ul>
 
     <h2>Contact</h2>
     <p>Nick Howes (nick@nickhowes.co.uk)</p>
 
-  </div>
 
-  
-</body>
-</html>
+<script>
+(function(){
+  var response = document.getElementById('awesome-response');
+  document.getElementById('is-awesome').onclick = function(){
+    response.innerHTML = "Damn right it is."; 
+  };
+  document.getElementById('not-awesome').onclick = function(){
+    response.innerHTML = "I think you'll find that in this case you are incorrect, and it is in fact awesome."; 
+  };
+})();
+</script>
