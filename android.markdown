@@ -1,7 +1,7 @@
 ---
 title: Android
 layout: default
-permalink: /android
+permalink: /android.html
 ---
 
 Some stuff about Android apps, at a nice short permalink.
