@@ -3,32 +3,21 @@ layout: default
 title: Half Ninja
 ---
 
-    <h1><a href="http://github.com/halfninja">Half Ninja</a></h1>
-
-    <p>A wizard has turned your git repo into a website! Is this awesome <span id="is-awesome">Y</span>/<span id="not-awesome">N</span>? <span id="awesome-response"></span></p>
-
-    <h2>Some kind of H-two</h2>
-
-    <p>Let's see what Jekyll can do.</p>
-
-   <ul class="posts">
-    {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ site.baseurl }}{{ post.url | remove:site.urlstrip }}">{{ post.title }}!</a></li>
+<h2>Science</h2>
+   <ul class="experiments">
+    {% for post in site.categories.experiments %}
+      <li><a href="{{ site.baseurl }}{{ post.url | remove:site.urlstrip }}" title="{{ post.title }}"><img src="{{ site.baseurl }}{{post.id}}.png"></a></li>
     {% endfor %}
   </ul>
 
-    <h2>Contact</h2>
-    <p>Nick Howes (nick@nickhowes.co.uk)</p>
+<h2>Blarg</h2>
+{% if site.categories.blog %}
+   <ul class="posts">
+    {% for post in site.categories.blog %}
+      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ site.baseurl }}{{ post.url | remove:site.urlstrip }}">{{ post.title }}!</a></li>
+    {% endfor %}
+  </ul>
+{% else %}
+  <p>Nothing in the Blawhrg yet.</p>
+{% endif %}
 
-
-<script>
-(function(){
-  var response = document.getElementById('awesome-response');
-  document.getElementById('is-awesome').onclick = function(){
-    response.innerHTML = "Damn right it is."; 
-  };
-  document.getElementById('not-awesome').onclick = function(){
-    response.innerHTML = "I think you'll find that in this case you are incorrect, and it is in fact awesome."; 
-  };
-})();
-</script>

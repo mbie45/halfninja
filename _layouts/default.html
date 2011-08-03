@@ -1,42 +1,54 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<html lang="en">
   <head>
     <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <link href='http://fonts.googleapis.com/css?family=Judson|Nobile' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{{site.baseurl}}/assets/css/style.css" type="text/css" media="screen" />
     <title>{{ page.title }}</title>
-   <style type="text/css">
-    body {
-      margin-top: 1.0em;
-      background-color: #ffffff;
-      font-family: Helvetica, Arial, FreeSans, san-serif;
-      color: #000000;
-    }
-    #container {
-      margin: 0 auto;
-      width: 700px;
-    }
-    h1 { font-size: 3.8em; color: #000000; margin-bottom: 3px; }
-    h1 .small { font-size: 0.4em; }
-    h1 a { text-decoration: none }
-    h2 { font-size: 1.5em; color: #000000; }
-    h3 { text-align: center; color: #000000; }
-    a { color: #000000; }
-    .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
-    .download { float: right; }
-    pre { background: #000; color: #fff; padding: 15px;}
-    hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
-    .footer { text-align:center; padding-top:30px; font-style: italic; }
-  </style>
   </head>
   <body>
-	<a href="http://github.com/halfninja/halfninja"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
-    <div id="container">
-      <div id="wrapper">
-        <div id="content" class="site">
+<div id="page">
+<div id="header">
+	<div id="headerimg">
+		{% if page.title == 'Half Ninja' %}
+		<h1><a href="http://www.halfninja.co.uk/">Half Ninja</a></h1>
+		<div class="description">Code and doodles. Coodles.</div>
+		{% else %}
+		<h2><a href="http://www.halfninja.co.uk/">Half Ninja</a></h2>
+		<h1>{{ page.title }}</h1>
+		{% endif %}
+	</div>
+<div class="narrow-only">
+  <a href="#sidebar">Skip to sidebar</a>
+</div>
+</div>
+<hr />
 
-          {{ content }}
+<div id="content-and-sidebar">
+<div id="content">
+<div id="in-content">
+{{ content }}
+</div>
+</div>
+<div id="sidebar">
+<ul> 
+  <li id="linkcat-2" class="widget widget_links"><h3 class="widgettitle">Links</h3> 
+    <ul class='xoxo blogroll'> 
+    <li><a href="http://github.com/halfninja" rel="me">My Github</a></li> 
+    <li><a href="http://www.vimeo.com/nickhowes" rel="me" title="My Vimeo profile where I upload most videos.">My Vimeo profile</a></li> 
+    </ul> 
+  </li> 
+  <li id="linkcat-11" class="widget widget_links"><h3 class="widgettitle">Other sites</h3> 
+    <ul class='xoxo blogroll'> 
+    <li><a href="http://www.blender.org/" title="Free software which I use for all animation">Blender 3D</a></li> 
+    <li><a href="http://www.processing.org/" title="Graphical code sketch software">Processing</a></li> 
+    </ul> 
+  </li> 
+</ul> 
+</div>
+</div>
 
-        </div>
-      </div>
-    </div>
+<a href="http://github.com/halfninja/halfninja"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
+
   </body>
 </html>

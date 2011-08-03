@@ -1,5 +1,5 @@
 ---
-title: Android
+title: Android Apps
 layout: default
 permalink: /android.html
 ---

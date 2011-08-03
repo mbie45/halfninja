@@ -1,2 +1,4 @@
 baseurl: /halfninja
 urlstrip: .html
+permalink: none
+

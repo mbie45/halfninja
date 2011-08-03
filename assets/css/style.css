@@ -1,0 +1,175 @@
+/*
+Theme Name: Half Ninja
+Theme URI: http://www.halfninja.co.uk/
+Description: Design for halfninja.co.uk
+Version: 1.0
+Author: Nick Howes
+Author URI: http://www.halfninja.co.uk/
+*/
+
+body {
+background-color:#ccc;
+background-image: -webkit-radial-gradient(#fff 0%, #ccc 61%);
+background-image: -moz-radial-gradient(#fff 0%, #ccc 61%);
+background-image: radial-gradient(#fff 0%, #ccc 61%);
+background-position: 30% -32em;
+background-size:60em 60em;
+background-repeat: no-repeat;
+font-family: 'Nobile', sans, sans-serif;
+font-size: 75%;
+}
+
+a img { border: none; }
+hr { display: none; }
+
+#header, h2, h3, h4, h5, h6 { font-family: 'Judson', Garamond, serif; }
+#header, h2 {
+  color: #333;
+}
+
+.post h2 a, .post h2 a:visited,
+.page h2 a, .page h2 a:visited {
+  text-decoration: none;
+  color: #333;
+}
+
+#header, #content, #content-and-sidebar, #footer {
+  width: 420px;
+  margin: 0 auto;
+}
+
+#content img { max-width: 400px; }
+
+.post h2, .page h2 { font-size: 200%; margin: 0; padding: 0 }
+
+#header .description {
+  font-size: 140%;
+  text-shadow: #fff 0 -1px 0px;
+}
+
+h1 { font-size: 6em; }
+h2 { font-size: 3em; }
+h1,h2 {
+  line-height: 0.75em;
+  text-shadow: #fff 0 -1px 0px;
+  margin: 0.5em 0 10px 0;
+}
+
+h1 a, h1 a:visited,
+h2 a, h2 a:visited {
+  color: #333;   
+  text-decoration: none;
+}
+
+h3 { font-size: 2em;
+  margin: 0.1em 0;
+}
+
+#content { 
+  text-align: center;
+}
+
+#in-content { text-align: left; }
+
+.post,
+.page { 
+  text-align: left;
+  background: white;
+  margin: 2em 0;
+  padding: 10px;
+  position: relative;
+}
+
+.page, .post, #sidebar {
+  box-shadow: 0px 5px 5px rgba(0,0,0,0.3);
+  -webkit-box-shadow: 0px 5px 5px rgba(0,0,0,0.3);
+  -moz-box-shadow: 0px 5px 5px rgba(0,0,0,0.3);
+}
+
+.feedback {
+  position: absolute;
+  right: -24px;
+  width: 32px;
+  bottom: 8px;
+  opacity: 0.5;
+}
+.feedback img { vertical-align: middle; }
+.feedback a, .feedback a:visited { color:#000; text-decoration:none; }
+
+.post .date, .post .feedback,
+.page .date, .page .feedback {
+       -moz-transition: all 0.3s linear;  /* FF4+ */
+       -o-transition: all 0.3s linear;  /* Opera 10.5+ */
+  -webkit-transition: all 0.3s linear;  /* Saf3.2+, Chrome */
+      -ms-transition: all 0.3s linear;  /* IE10? */
+          transition: all 0.3s linear;
+}
+.post .date,
+.page .date { 
+  text-align: right; display: block; color: #999; float:right;
+}
+.post:hover .date,
+.page:hover .date { color: #333; }
+.post:hover .feedback,
+.page:hover .feedback  { opacity: 1; }
+.post .end { clear: both; }
+img.alignleft { float: left; margin-right: 5px; margin-bottom: 15px; }
+img.alignright { float: right; margin-left: 5px; margin-bottom: 15px; }
+
+ul.experiments, ul.experiments li {
+  list-style-type: none;
+  margin: 0; padding: 0;
+}
+
+/* sidebar */
+
+#sidebar ul, #sidebar li {
+  list-style: none;
+  margin:0; padding:0;
+}
+
+#content-and-sidebar { position: relative; }
+
+.narrow-only { display: none; }
+
+#sidebar {
+position: absolute;
+width: 150px;
+top: 0px;
+right: -170px;
+padding: 5px;
+background-color: #338000;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#71c837), to(#338000)); /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient(top, #71c837, #338000); /* Chrome 10+, Saf5.1+ */
+  background-image:    -moz-linear-gradient(top, #71c837, #338000); /* FF3.6 */
+  background-image:     -ms-linear-gradient(top, #71c837, #338000); /* IE10 */
+  background-image:      -o-linear-gradient(top, #71c837, #338000); /* Opera 11.10+ */
+  background-image:         linear-gradient(top, #71c837, #338000);
+border: 1px solid #338000;
+color: white;
+}
+#sidebar h2, #sidebar a {
+  color: #fff;
+  margin: 0;
+}
+
+/* too narrow for the sidebar */
+@media all and (max-width:600px) {
+.narrow-only { display: block; }
+#sidebar {
+  position: static;
+  width: 420px;
+  margin: 0 auto;
+}
+}
+
+/* small screens */
+@media all and (max-width:500px) {
+
+#header, #content, #content-and-sidebar, #sidebar, #footer { width: 100%; }
+h1 { font-size: 2em; }
+body { margin:0; padding: 0 }
+.post, .page { margin: 10px 0 }
+#content img { max-width: 100%; height: auto; }
+
+}
